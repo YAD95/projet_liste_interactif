@@ -17,8 +17,11 @@ Votre choix : """)
     
     elif choix == "2":
         element = input("Entrez l'élément à retirer : ")
-        ma_liste.remove(element)
-        print(f"✅ L'élément '{element}' a été retiré à la liste.")
+        if element in ma_liste:
+            ma_liste.remove(element)
+            print(f"✅ L'élément '{element}' a été retiré de la liste.")
+        else:
+            print(f"⚠️ L'élément '{element}' n'est pas dans la liste.")
     
     elif choix == "3":
         print(f"""Voici le contenu de la liste :
