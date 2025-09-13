@@ -24,8 +24,12 @@ Votre choix : """)
             print(f"⚠️ L'élément '{element}' n'est pas dans la liste.")
     
     elif choix == "3":
-        print(f"""Voici le contenu de la liste :
+        if ma_liste:
+            print(f"""Voici le contenu de la liste :
               {ma_liste}""")
+        else : print("""Votre liste est vide""")
+
+        
     
     elif choix == "4":
         ma_liste.clear()
